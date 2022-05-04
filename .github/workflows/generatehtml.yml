@@ -25,4 +25,4 @@ jobs:
         echo "/usr/lib/ballerina/dependencies/jdk-11.0.8+10-jre/bin/java" >> $GITHUB_PATH
     - name: Run Tests
       run: |
-        bash bal run
+        bal run
