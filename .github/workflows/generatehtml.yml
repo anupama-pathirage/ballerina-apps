@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-          token: ${{ secrets.WEBSITE_TOKEN }}
+          token: ${{ secrets.PROPOSAL_BOT_SECRET2 }}
     - name: Download jBallerina deb
       run: |
           curl -L "https://github.com/ballerina-platform/ballerina-distribution/releases/download/v$JBAL_VERSION/ballerina-$JBAL_VERSION-swan-lake-linux-x64.deb" > $HOME/ballerina-$JBAL_VERSION-swan-lake-linux-x64.deb
@@ -48,4 +48,4 @@ jobs:
         git config --global user.name "anupama-pathirage"
         git push origin master
       env:
-        GITHUB_TOKEN: ${{ secrets.WEBSITE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PROPOSAL_BOT_SECRET2 }}
