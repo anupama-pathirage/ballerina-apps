@@ -43,5 +43,5 @@ jobs:
       run: |
         git push https://$USERNAME:$REPO_KEY@github.com/anupama-pathirage/ballerina-apps.git master
       env:
-        REPO_KEY: ${{secrets.PROPOSAL_BOT_SECRET}}
+        REPO_KEY: ${{secrets.PROPOSAL_BOT_SECRET2}}
         USERNAME: github-actions[bot]
