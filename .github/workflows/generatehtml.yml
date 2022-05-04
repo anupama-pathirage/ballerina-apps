@@ -41,4 +41,7 @@ jobs:
       shell: bash
     - name: Push changes 
       run: |
-        git push origin master
+        git push https://$USERNAME:$REPO_KEY@github.com/anupama-pathirage/ballerina-apps.git master
+      env:
+        REPO_KEY: ${{secrets.PROPOSAL_BOT_SECRET}}
+        USERNAME: github-actions[bot]
