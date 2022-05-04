@@ -39,8 +39,6 @@ jobs:
            echo "::set-output name=push::true"
         fi
       shell: bash
-    - name: Push changes
-      if: steps.commit.outputs.push == 'true'
-      uses: ad-m/github-push-action@master
-      with:
-         github_token: ${{ secrets.PROPOSAL_BOT_SECRET }}
+    - name: Push changes 
+      run: |
+        git push origin master
