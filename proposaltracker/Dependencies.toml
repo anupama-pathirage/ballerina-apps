@@ -7,20 +7,6 @@
 dependencies-toml-version = "2"
 
 [[package]]
-org = "anupama"
-name = "proposaltracker"
-version = "0.1.0"
-dependencies = [
-	{org = "ballerina", name = "http"},
-	{org = "ballerina", name = "io"},
-	{org = "ballerina", name = "lang.runtime"},
-	{org = "ballerinai", name = "observe"}
-]
-modules = [
-	{org = "anupama", packageName = "proposaltracker", moduleName = "proposaltracker"}
-]
-
-[[package]]
 org = "ballerina"
 name = "auth"
 version = "2.2.1"
@@ -285,6 +271,20 @@ dependencies = [
 ]
 modules = [
 	{org = "ballerinai", packageName = "observe", moduleName = "observe"}
+]
+
+[[package]]
+org = "runner"
+name = "proposaltracker"
+version = "0.1.0"
+dependencies = [
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "io"},
+	{org = "ballerina", name = "lang.runtime"},
+	{org = "ballerinai", name = "observe"}
+]
+modules = [
+	{org = "runner", packageName = "proposaltracker", moduleName = "proposaltracker"}
 ]
 
 
