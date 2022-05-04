@@ -12,9 +12,12 @@ jobs:
   test:
     env:
       JBAL_VERSION: '2201.0.3'
+      GITHUB_TOKEN: ${{secrets.PROPOSAL_BOT_SECRET2}}
     runs-on: ubuntu-latest  
     steps:
     - uses: actions/checkout@v2
+      with:
+          token: ${{ secrets.WEBSITE_TOKEN }}
     - name: Download jBallerina deb
       run: |
           curl -L "https://github.com/ballerina-platform/ballerina-distribution/releases/download/v$JBAL_VERSION/ballerina-$JBAL_VERSION-swan-lake-linux-x64.deb" > $HOME/ballerina-$JBAL_VERSION-swan-lake-linux-x64.deb
@@ -44,3 +47,5 @@ jobs:
         git config --global user.email "anupama@wso2.com"
         git config --global user.name "anupama-pathirage"
         git push origin master
+      env:
+        GITHUB_TOKEN: ${{ secrets.WEBSITE_TOKEN }}
